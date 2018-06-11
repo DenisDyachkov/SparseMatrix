@@ -15,6 +15,7 @@ all: build
 build: $(OBJECTS)
 	@$(CC) $(CFLAG) $(OBJECTS) -o $(BIN)/$(TARGET)
 	@echo "\033[0;32mLinking \""$(TARGET)"\" complete!\033[0;0m"
+	@$(BIN)/$(TARGET)
 
 $(OBJECTS): $(BUILD)/%.o : $(SRC)/%.cpp
 	@$(DIRGUARD)
